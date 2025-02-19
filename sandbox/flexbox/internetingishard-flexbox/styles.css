@@ -1,0 +1,134 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: Courier, monospace;
+  padding: 0;
+  margin: 0;
+  color: #1e3148;
+}
+
+html {
+  box-sizing: inherit;
+  background-color: aliceblue;
+}
+
+.fill-screen {
+  max-width: 100vw;
+}
+
+.nav {
+  background-color: #add0eb;
+}
+
+.menu-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 900px;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 250px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* .subscribe,
+.social,
+.logo,
+.photo-grid-item {
+  border: 1px solid palevioletred;
+} */
+
+.photos {
+  background-color: rgb(216, 238, 255);
+}
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+}
+
+.photo-grid {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex: 1;
+}
+
+.photo-grid-item {
+  max-width: 200px;
+  padding: 5px;
+}
+
+.first-item {
+  order: 1;
+}
+
+.grid-image {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+.child {
+  /* 1.) Default flex-item behaviour: children can shrink, will be as wide as their content (max-content), and will not grow past that content width */
+  /* flex: 0 1 auto;  */
+
+  /* 2.) children can shrink, will fill the parent flex container. The size depends on the size of the max-content plus the space to fill the parent container (the rate of growth and shrinking)*/
+  /* flex: 1 1 auto; */
+
+  /* 3.) children can shrink, grow, and will all be the same size. (if grandchild has a fixed width, the child of the parent cannot get smaller than the grandchild; the other children, if they have no fixed width, will keep getting smaller) */
+  /* flex: 1 1 0; (setting % width of granfchild or child will disable wrapping)*/
+  flex: 1;
+
+  background-color: #add0eb;
+  outline: 2px ridge #b0b5ed;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-partition {
+  height: 200px;
+  flex: 0 1 200px;
+  background-color: #9ea1c8;
+}
+
+.middle-foot {
+  background-color: aqua;
+  flex: 2 1 200px;
+}

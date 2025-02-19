@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!-- Some HTML elements, such as <a>, <span>, <em> and <strong> use inline as their outer display type by default. -->
+
+<html lang="en-us">
+  <head>
+    <title>Block and Inline Boxes</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="block-inline-styles.css" />
+  </head>
+
+  <body>
+    <p>
+      I am a test paragrapgh.
+      <span class="default-inline">Span, by defualt</span> is an inline
+      <span class="default-inline"
+        >element. Inline elements will not start a newline</span
+      >
+      You should know that an
+      <span class="default-inline">inline element</span> cannot take on
+      <span class="default-inline">CSS height or width properties</span>. They
+      are disabled
+    </p>
+
+    <p>
+      The p tag, however, is not inline by default. All block elements will
+      start on a new line
+    </p>
+
+    <div class="default-block">by defualt, the div</div>
+
+    <div class="default-block">element is block level</div>
+
+    <div class="block">
+      Block level elements can take on a width and height property! But make
+      sure that hte block element is large enough to avoid content overflow!
+    </div>
+
+    <p>
+      Finally, there is the inline-block level display.
+      <span class="inline-block">With the inline-block</span>, elements like
+      span <span class="inline-block">can be made inline while</span>also being
+      able to take on a height and width!
+    </p>
+
+    <div class="box">
+      This is the standaerd box model. Calculation w/h: 250px (width) + 4rem
+      (padding) + 1rem (border)
+    </div>
+    <div class="box alternate">
+      This is the alternate box model; if you are using the alternative box
+      model, then the bigger the border/padding is, the smaller the content box
+      is, as the border takes up some of that available width and height of the
+      element box.
+    </div>
+
+    <div class="container">
+      <p class="one">
+        Watch out for margin collapsing. I have a margin bottom of 10rem. Margin
+        collapsing will go to the larger of the two margins
+      </p>
+      <p class="two">
+        This feature can often make debugging confusing! I have a margin top of
+        2rem
+      </p>
+    </div>
+
+    <div class="card">
+      <img
+        class="images"
+        src="https://img.freepik.com/free-photo/illustration-rain-futuristic-city_23-2151406585.jpg?t=st=1738622262~exp=1738625862~hmac=30b62c845658d6580277e416ab35c919bbb197e904756d5e5b1478209ba76d68&w=1480"
+        alt="Cyberpunk City In The rain"
+      />
+      <div class="text-wrapper"><p>Cyberpunk City</p></div>
+    </div>
+  </body>
+</html>

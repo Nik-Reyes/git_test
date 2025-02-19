@@ -1,0 +1,74 @@
+.default-inline {
+  height: 20px;
+  font-size: large;
+  padding: 10px 10px;
+  display: inline-block;
+}
+
+.default-inline:hover {
+  outline: 1px solid black;
+}
+
+.default-block {
+  border: 3px solid rgb(0, 255, 157);
+  padding: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.block {
+  width: fit-content;
+  height: 7.5rem;
+  border: 0.5px solid orange;
+}
+
+.inline-block {
+  border: 3px solid rgb(55, 248, 255);
+  padding: 0.1rem;
+  margin-bottom: 0.2rem;
+  height: 2rem;
+  width: 10rem;
+  display: inline-block;
+}
+
+.box {
+  color: brown;
+  background-color: grey;
+  height: 250px;
+  width: 250px;
+  margin: 4rem;
+  padding: 4rem;
+  border: 1rem solid red;
+}
+
+.box.alternate {
+  color: aqua;
+  box-sizing: border-box;
+  padding: 250px;
+  border: 250px;
+}
+
+.container {
+  border: 1px solid yellowgreen;
+}
+
+.one {
+  margin-bottom: 10rem;
+}
+
+.two {
+  margin-top: 2rem;
+}
+
+.card {
+  width: 25%;
+  background-color: red;
+}
+
+.images {
+  width: 100%;
+}
+
+.text-wrapper {
+  text-align: center;
+  padding: 10px;
+}
