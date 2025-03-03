@@ -13,13 +13,35 @@ let compueterScore = 0;
 let computerChoice;
 let humanChoice;
 
-let getComputerChoice = () => {
-  return Math.floor(Math.random() * 3);
+const getComputerChoice = () => {
+  return Math.floor(Math.random() * 3) + 1;
+};
+
+const getHumanChoice = () => {
+  let choice = prompt("Rock, Paper, or Scissors?", null).toLowerCase();
+
+  if (choice === "rock" || choice === "paper" || choice === "scissors") {
+    switch (choice) {
+      case "rock":
+        return 1;
+      case "paper":
+        return 2;
+      case "scissors":
+        return 3;
+    }
+  } else {
+    //if no value is returned, then the user entry is invalid
+    alert(`${choice} is not a valid choice`);
+    getHumanChoice();
+  }
 };
 
 do {
   //get computer choice
   computerChoice = getComputerChoice();
 
+  //get human choice
+  humanChoice = getHumanChoice();
+  console.log(humanChoice);
   roundCount++;
 } while (roundCount <= 5);
