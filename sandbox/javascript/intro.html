@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let result = 7 + 13 / 9 + 7;
+      // let result2 = (100 / 2) * 6;
+
+      // finalResult = Number((result * result2).toFixed(2));
+      // console.log(finalResult);
+      // console.log(typeof finalResult);
+
+      // let count = 2;
+      // let a = count++;
+
+      // console.log(a);
+
+      // let num1 = 10.2;
+      // let num2 = 10;
+
+      // console.log(`num1 (${num1}) is a ${typeof num1}`);
+      // console.log(`num2 (${num2}) is a ${typeof num2}`);
+
+      // console.log(Number.MAX_VALUE); // 1.7976931348623157e+308
+      // console.log(Number.MAX_VALUE + 1e308); // Infinity
+      // name = "jackson";
+      // console.log(`hi my name is
+      // ${name}`);
+
+      // let bigInt_type = 10n;
+      // let number_type = 100;
+      // let string_type = "charlie";
+      // let null_type = null;
+      // let undefined_type = undefined;
+      // let boolean_type = true;
+      // let object_type = new Number(123);
+
+      // const cities = ["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"];
+
+      // for (const city of cities) {
+      //   let t_city = city.toLowerCase();
+      //   let t_first_letter = city[0].toUpperCase();
+      //   update_city = t_city.replace(t_city[0], t_first_letter);
+      //   console.log(update_city);
+      // }
+
+      // const stations = [
+      //   "MAN675847583748sjt567654;Manchester Piccadilly",
+      //   "GNF576746573fhdg4737dh4;Greenfield",
+      //   "LIV5hg65hd737456236dch46dg4;Liverpool Lime Street",
+      //   "SYB4f65hf75f736463;Stalybridge",
+      //   "HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield",
+      // ];
+
+      // for (const station of stations) {
+      //   let station_code = station.substr(0, 3);
+      //   let split_arr = station.split(";", 2);
+      //   let result = station_code.concat(": ", split_arr[1]);
+      //   console.log(result);
+      // }
+
+      // const quote =
+      //   "I do not like green eggs and ham. I do not like them, Sam-I-Am.";
+      // const substring = "green eggs and ham";
+
+      // quoteLength = quote.length;
+      // index = quote.indexOf(substring);
+      // console.log(index);
+      // first_part = quote.substr(0, index);
+      // revisedQuote = first_part.concat(substring, ".");
+
+      // console.log(
+      //   `The quote is ${quoteLength} characters long.\n${revisedQuote}`
+      // );
+
+      // const quote = "I dO nOT lIke gREen eGgS anD HAM";
+
+      // const first_part = quote[0];
+      // console.log(first_part);
+
+      // let start_index = quote.indexOf(quote[1]);
+      // let end_index = quote.indexOf(quote[quote.length - 1]);
+
+      // const second_part = quote.substr(start_index, end_index).toLowerCase();
+      // console.log(second_part);
+
+      // let fixedQuote = first_part + second_part;
+      // console.log(fixedQuote);
+
+      // //Another Approach
+
+      // let lowerQuote = quote.toLowerCase();
+      // console.log(lowerQuote);
+      // let finalQuote = lowerQuote.replace(
+      //   lowerQuote[0],
+      //   lowerQuote[0].toUpperCase()
+      // );
+      // console.log(finalQuote);
+
+      // const theorem = "Pythagorean theorem";
+
+      // const a = 5;
+      // const b = 8;
+
+      // const myString = `Using *, we can work out that that if the two shortest sides of a right-angled triangle have lengths of * and *, the length of the hypotenuse is *.`;
+
+      // let newString = myString
+      // .replace("*", theorem)
+      // .replace("*", a)
+      // .replace("*", b)
+      // .replace("*", a * b);
+      // console.log(newString);
+
+      // alert(1 || 0);
+      // alert(null || 1);
+      // alert(null || 0 || 1);
+      // alert(undefined || null || 0);
+
+      // const num = 10;
+
+      // if (
+      //   num === 1 ||
+      //   num === 2 ||
+      //   num === 3 ||
+      //   num === 4 ||
+      //   num === 5 ||
+      //   num === 6 ||
+      //   num === 1 ||
+      //   num === 7 ||
+      //   num === 8 ||
+      //   num === 9 ||
+      //   num === 10
+      // ) {
+      //   console.log("found the number!");
+      // }
+
+      // alert((1 && 1 && 0 && 1) || (1 && 1));
+
+      // let num = -1;
+      // let result = !!num;
+      // console.log(result);
+
+      // let offical_name = prompt(
+      //   "What is the 'official' name of JavaScript?",
+      //   ""
+      // );
+
+      // if (offical_name.toLocaleLowerCase() === "ecmascript") {
+      //   alert("Right!");
+      // } else {
+      //   alert("Errrrrrr!");
+      // }
+
+      // const num1 = 10;
+      // console.log(num1 + 10);
+
+      // const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+      // function lCat(cat) {
+      //   return cat.endsWith("l");
+      // }
+
+      // let culledCat = cats.filter(lCat);
+
+      // console.log(culledCat);
+
+      // const myNumber = Math.random();
+      // console.log(myNumber);
+      // [ "Leopard", "Lion" ]
+
+      // const alphabet = [
+      //   "a",
+      //   "b",
+      //   "c",
+      //   "d",
+      //   "e",
+      //   "f",
+      //   "g",
+      //   "h",
+      //   "i",
+      //   "j",
+      //   "k",
+      //   "l",
+      //   "m",
+      //   "n",
+      //   "o",
+      //   "p",
+      //   "q",
+      //   "r",
+      //   "s",
+      //   "t",
+      //   "u",
+      //   "v",
+      //   "w",
+      //   "x",
+      //   "y",
+      //   "z",
+      // ];
+
+      // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, [1, 2, 3]];
+
+      // console.log(numbers);
+      // console.log(alphabet);
+
+      // console.log(numbers.length);
+      // console.log(alphabet.length);
+
+      // numbers[0] = 10;
+      // console.log(numbers);
+
+      // let nestedIndex = numbers.findIndex(Array.isArray);
+      // console.log(numbers[nestedIndex]);
+
+      // numbers.push(25);
+      // console.log(numbers);
+      // let length = numbers.unshift(12);
+      // console.log(numbers);
+      // console.log(length);
+      // const popped = numbers.pop();
+      // console.log(numbers);
+      // console.log(popped);
+      // numbers.shift();
+      // console.log(numbers);
+
+      // let index = numbers.findIndex(Array.isArray);
+      // if (index !== -1) {
+      //   numbers.splice(index, 1);
+      // } else {
+      //   console.log("item does not exist");
+      // }
+      // console.log(numbers);
+
+      // index = numbers.findIndex(Array.isArray);
+      // if (index !== -1) {
+      //   numbers.splice(index, 1);
+      // } else {
+      //   console.log("item does not exist");
+      // }
+
+      // numbers.push([1, 2, 3]);
+      // console.log(numbers);
+
+      // for (const number of numbers) {
+      //   console.log(number);
+      // }
+
+      // console.log(typeof numbers[0]);
+
+      // function doubleUp(num) {
+      //   console.log(typeof num);
+      //   if (typeof num !== "number") {
+      //     console.log(`This is not a number: ${num}`);
+      //   }
+      //   return num * 2;
+      // }
+
+      // console.log(`Entering function`);
+      // const arrayDoubled = numbers.map(doubleUp);
+      // for (const number of arrayDoubled) {
+      //   console.log(number);
+      // }
+
+      // const nameList =
+      //   "Paul Blart, Darth Vader, Jimi Hendrix, Bob Dylan, Timothy Chalamet, Ru Paul";
+
+      // const nameArray = nameList.split(",");
+      // for (let i = 0; i < nameArray.length; i++) {
+      //   nameArray[i] = nameArray[i].trimStart();
+      // }
+      // console.log(nameArray);
+
+      // const backToString = nameArray.toString();
+      // console.log(backToString);
+
+      // number 1
+
+      // let string =
+      //   "Underpants:6.99, Socks:5.99, T-shirt:14.99, Trousers:31.99, Shoes:23.99";
+      // let total = 0;
+
+      // let itemPricing = string.split(", ");
+
+      // for (let listing of itemPricing) {
+      //   listing = listing.split(":");
+      //   console.log(listing);
+      //   total += Number(listing[1]);
+      //   let listItem = `${listing[0]} - $${listing[1]}`;
+      //   console.log(listItem)
+      // }
+
+      // function test(name, text = "Pokemon") {
+      //   console.log(`${name} is a ${text}`);
+      // }
+
+      // test("nik", "rascal");
+
+      // function checkAge(age) {
+      //   // return age > 18 || confirm("Do you have parental permission?");
+      //   return age > 18 ? true : confirm("Do you have parental permission?");
+      // }
+
+      // permission = checkAge(19);
+      // console.log(permission);
+
+      // function min(a, b) {
+      //   return a < b ? a : b;
+      // }
+
+      // result = min(30, 20);
+      // console.log(result);
+
+      // function pow(a, n) {
+      //   let powered = a;
+      //   for (let i = 2; i <= n; i++) {
+      //     console.log(`i = ${i}`);
+      //     console.log(`n = ${n}`);
+
+      //     powered = powered * a;
+      //     console.log(`a = ${powered}`);
+      //   }
+      //   console.log(`a = ${a}`);
+
+      //   return a;
+      // }
+
+      // pow(3, 3);
+
+      // function greeting() {
+      //   alert("Well, hello there!");
+      // }
+
+      // // alert(greeting);
+
+      // let greeting_copied = greeting;
+
+      // console.log(greeting_copied);
+
+      // let greeting2 = function () {
+      //   alert("hi");
+      // };
+
+      // let greeting2 = function () {
+      //   return "hi";
+      // };
+
+      // let func = greeting2;
+      // func();
+      // console.log(typeof func);
+      // console.log(func());
+
+      //Function Expression
+      // let funcExpression = function () {
+      //   return "hi";
+      // };
+      // //arrow functions
+      // let arrowFunc = () => "Hi!";
+
+      // // Replace Function Expressions with arrow functions in the code below:
+
+      // // function ask(question, yes, no) {
+      // //   if (confirm(question)) yes();
+      // //   else no();
+      // // }
+
+      // // ask(
+      // //   "Do you agree?",
+      // //   function() { alert("You agreed."); },
+      // //   function() { alert("You canceled the execution.");
+      // // );
+
+      // let ask = (question, yes, no) => {
+      //   // console.log(yes);
+      //   // console.log(no);
+      //   confirm(question) ? yes() : no();
+      // };
+
+      // ask(
+      //   "Do you agree",
+      //   () => alert("You agreed"),
+      //   () => alert("You Canceled the execution")
+      // );
+
+      // function task(message) {
+      //   // // emulate time consuming task
+      //   // let n = 10000000000;
+      //   // while (n > 0) {
+      //   //   n--;
+      //   // }
+      //   console.log(message);
+      // }
+
+      // console.log("Start Script");
+
+      // setTimeout(() => task("Download a file."), 1000);
+
+      // console.log("End Script");
+
+      // 1. Write a function called add7 that takes one number and returns that number + 7.
+      // 2. Write a function called multiply that takes 2 numbers and returns their product.
+      // 3. Write a function called capitalize that takes a string and returns that string with   only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+      // 4. Write a function called lastLetter that takes a string and returns the very last letter of that string:
+      //   --> lastLetter("abcd") should return "d"
+
+      // let add7 = (number) => number + 7;
+
+      // console.log(add7(7));
+
+      // let multiply = (a, b) => a * b;
+      // console.log(multiply(4, 17));
+
+      // function checkStr(str) {
+      //   return typeof str === "string" ? String(str) : str;
+      // }
+
+      // function capitalize(str) {
+      //   str = checkStr(str);
+      //   console.log(`The param is a ${typeof str}`);
+
+      //   console.log(`The param = ${str}`);
+      //   str = str.toLowerCase();
+      //   console.log(`The param = ${str}`);
+      //   str = str[0].toUpperCase() + str.slice(1);
+      //   console.log(`The param = ${str}`);
+
+      //   return str;
+      // }
+
+      // capitalize("helLO");
+
+      // function lastLetter(str) {
+      //   str = checkStr(str);
+      //   return str.slice(0, str.length - 1) + str[str.length - 1].toUpperCase();
+      // }
+
+      // console.log(lastLetter("aqqq"));
+
+      //On functions
+      //1. Function expressions are any function created inside of an expression or inside another syntax construct
+      //2. A function declaration is created outside any expression, as a spearate statement
+      //Additionally, a function declaration is visibale all throughout the scope in which it was declared, meaning that even if a function call is before the actual function declaration (and is inside the same scope as the function), the function call will still work because JS can has global access to that function. However, a function expression (literal and arrow functions) cannot be called before JS assigns the function expression to a variable
+
+      // JavaScript Hoisting: What is it?
+      // at the absolute beginning of any program, Javascript creates a global execution context, which consists of two phases: (1) The memory allocation phase, and (2) the code execution phase. The first phase of the execution context is the phase in which the engine parser skims through the entire script and stores each variable and function inside local memory. Depending on the variable or function, the variable or function will be assigned a value of undefined. After the first phase, the code execution phase begins, and here is the important part: both the memory allocation phase and the code execution phase share the same local execution context memory; meaning, the code execution phase has access to any function or variable in that execution context. Therefore if a function call comes before the function declaration, the code execution phase will access the local memory and actually be able to make that function call!
+      // In summary, JavaScript Hoisting is a feature that is a result of the memory allocation phase when the Parser scans the code and allocates memory for variables and functions inside the execution context before the code execution phase begins. The ode execution phase can run the code regardless of the where the function call is placed within the script thanks to hoisting.
+
+      // let's create 3 functions
+      // var funcs = [];
+      // for (var i = 0; i < 3; i++) {
+      //   // and store them in funcs
+      //   funcs[i] = function () {
+      //     var val = 10;
+      //     // each should log its value.
+      //     console.log("My value: " + i);
+      //   };
+      // }
+
+      // funcs[0]();
+      // console.log(funcs[1]);
+      // console.log(funcs[2]);
+
+      // var abc2 = 12;
+      // let abc1 = 10;
+      // var abc3 = 10;
+      // // console.dir(funcs[0]);
+
+      // // console.log(i);
+
+      // var funcs = [];
+      // function test() {
+      //   console.log(abc1);
+      //   var j = 10;
+      //   console.log(j); // ✅ 10 (Accessible inside the function)
+
+      //   for (let abc = 0; abc < 3; abc++) {
+      //     funcs[abc] = () => {
+      //       console.log(`j = ${j}`);
+      //     };
+      //   }
+      //   funcs[0]();
+      //   console.dir(funcs[0]);
+      //   console.dir(funcs[1]);
+      //   console.dir(funcs[2]);
+      // }
+
+      // test();
+      // console.log(funcs[0]);
+      // console.log(j); // ❌ ReferenceError: j is not defined
+
+      // Fizzbuzz
+
+      // const fizz = "fizz";
+      // const buzz = "buzz";
+      // const fizzbuzz = fizz + buzz;
+      // let userNumber = parseInt(
+      //   prompt("Please enter the number you would like to fizzbuzz up to: ")
+      // );
+
+      // for (let i = 1; i <= userNumber; i++) {
+      //   if (i % 3 === 0 && i % 5 === 0) {
+      //     console.log(`${i} = ${fizzbuzz}`);
+      //   } else if (i % 3 === 0) {
+      //     console.log(`${i} = ${fizz}`);
+      //   } else if (i % 5 === 0) {
+      //     console.log(`${i} = ${buzz}`);
+      //   } else {
+      //     console.log(`${i}`);
+      //   }
+      // }
+
+      // const str = "kowabunga";
+      // const offset = 2;
+      // const doubleStrLength = str.length * 2;
+      // for (var i = 0; i < doubleStrLength - 1; i++) {
+      //   if (i >= str.length - 1) {
+      //     // console.log(`${str.slice(0, i + offset - str.length)}`);
+      //     console.log(i + offset - str.length);
+      //   } else {
+      //     // console.log(`${str.slice(0, str.length - i)}`);
+      //     console.log(str.length - i);
+      //   }
+      // }
+      // console.log(i);
+      // console.log(str.slice(0, str.length - 1));
+
+      const a = 5;
+      const b = 10;
+
+      function add() {
+        return c;
+      }
+
+      console.log;
+
+      function print() {
+        add();
+      }
+
+      print();
+    </script>
+  </body>
+</html>
