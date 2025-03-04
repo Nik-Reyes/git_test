@@ -9,16 +9,51 @@
 
 let roundCount = 1;
 let humanScore = 0;
-let compueterScore = 0;
+let computerScore = 0;
 let computerChoice;
 let humanChoice;
+
+function printChoices(player, computer) {
+  let userChoiceToText;
+  let computerChoiceToText;
+
+  switch (computer) {
+    case 1:
+      computerChoiceToText = "rock";
+      break;
+    case 2:
+      computerChoiceToText = "paper";
+      break;
+    case 3:
+      computerChoiceToText = "scissors";
+      break;
+  }
+
+  switch (player) {
+    case 1:
+      userChoiceToText = "rock";
+      break;
+    case 2:
+      userChoiceToText = "paper";
+      break;
+    case 3:
+      userChoiceToText = "scissors";
+      break;
+  }
+
+  console.log(`You: ${userChoiceToText}\nComputer: ${computerChoiceToText}`);
+}
+
+function printScore(user, computer) {
+  console.log(`You: ${user}, Computer: ${computer}`);
+}
 
 const getComputerChoice = () => {
   return Math.floor(Math.random() * 3) + 1;
 };
 
 const getHumanChoice = () => {
-  let choice = prompt("Rock, Paper, or Scissors?", null).toLowerCase();
+  let choice = prompt("Rock, Paper, or Scissors?").toLowerCase();
 
   if (choice === "rock" || choice === "paper" || choice === "scissors") {
     switch (choice) {
@@ -36,12 +71,53 @@ const getHumanChoice = () => {
   }
 };
 
-do {
-  //get computer choice
-  computerChoice = getComputerChoice();
+const roundEval = (userChoice, computerChoice) => {
+  printChoices(userChoice, computerChoice);
+  if (userChoice === computerChoice) {
+    console.log("It's a draw!");
+    console.log(`\n`);
 
-  //get human choice
-  humanChoice = getHumanChoice();
-  console.log(humanChoice);
-  roundCount++;
-} while (roundCount <= 5);
+    return;
+  }
+
+  if (
+    (computerChoice === 1 && userChoice === 3) ||
+    (computerChoice === 2 && userChoice === 1) ||
+    (computerChoice === 3 && userChoice === 2)
+  ) {
+    console.log("Computer wins this round!");
+    console.log(`\n`);
+
+    computerScore++;
+  } else if (
+    (userChoice === 1 && computerChoice === 3) ||
+    (userChoice === 2 && computerChoice === 1) ||
+    (userChoice === 3 && computerChoice === 2)
+  ) {
+    console.log("You win this round!");
+    console.log(`\n`);
+
+    humanScore++;
+  }
+};
+
+function gameStart() {
+  do {
+    //get computer choice
+    computerChoice = getComputerChoice();
+
+    //get human choice
+    humanChoice = getHumanChoice();
+
+    //evaluate if the player or the computer won
+    roundEval(humanChoice, computerChoice);
+    roundCount++;
+    printScore(humanScore, computerScore);
+  } while (roundCount <= 5);
+}
+
+function runApp() {
+  gameStart();
+}
+
+runApp();
